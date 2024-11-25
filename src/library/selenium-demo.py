@@ -27,30 +27,6 @@ from selenium.webdriver import ActionChains        #模拟鼠标操作
 from selenium.webdriver.common.keys import Keys    #模拟键盘操作
 
 
-import time
-import random
-from selenium.webdriver.support.wait import WebDriverWait
-
-
-def spider(url, keyword):
-    web = webdriver.Chrome()    # step 1: 初始化浏览器
-    web.get(url)
-    web.implicitly_wait(3)     # 隐式等待3s--确保内容加载完全
-
-    # 定位元素
-    input_tag = web.find_elements_by_id('key')
-    input_tag.send_keys(keyword) # 模拟键盘输入关键字
-    input_tag.send_keys(Keys.ENTER) # 模拟键盘按Enter键
-    time.sleep(random.randint(2, 5))
-
-# 2.定位数据
-def get_goods(web):
-    goods = web.find_elements_by_class_name('gl-item')
-
-if __name__ == '__main__':
-    spider(url='www.jd.com', keyword='口罩')
-
-
 
 
 from selenium import webdriver  # pip install selenium -i
@@ -80,19 +56,19 @@ web.find_element(s)_by_id()
 web.find_elements_by_class_name()
 ...
 
-#step 4： 元素操作
-.click()                      #鼠标点击
-.send_keys()               #键盘输入与按键
+# step 4： 元素操作
+.click()                   # 鼠标点击
+.send_keys()               # 键盘输入与按键
 .text
 .get_attribute('href')
 
-#step 5: 等待响应
+# step 5: 等待响应
 time.sleep(random.randint(1, 2))
-time.sleep(3)             #强制等待
-web.implicitly_wait(10)  #隐式等待，最长10s
+time.sleep(3)             # 强制等待
+web.implicitly_wait(10)   # 隐式等待，最长10s
 WebDriverWait(web, 20, 0.5).until(expected_conditions.presence_of_element_located((By.LINK_TEXT, '词典')))   #显示等待最长20s，每0.5s检查一次，通过链接文本内容定位标签是否存在，如果20s上限就抛出异常
 
-#常用方法
+# 常用方法
 web.save_screenshot('....png')
 web.back()
 web.forward()
@@ -100,17 +76,18 @@ web.close()   #关闭当前页面窗口
 web.quit()
 web.page_soure()
 web.current_url
-#跳转窗口
+# 跳转窗口
 web.switch_to.window(web.window_handles[-1])
-#跳转播放窗口
+# 跳转播放窗口
 web.switch_to.frame(web.find_element_by_...)
-#切回
+# 切回
 web.switch_to.default_content()
 
 
-#下拉列表
+# 下拉列表
 from selenium.webdriver.support.select import Select
 import time
+
 sel = Select(web.find_element_by_xpath('')
 for i in range(len(sel.options)):
     sel.select_by_index(i)

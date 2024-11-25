@@ -19,7 +19,7 @@ cursor.execute('''
     ''')
 
 # 插入记录
-sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
+sql = "INSERT INTO customers(name, address) VALUES (%s, %s)"
 values = [("John Smith", "123 Main St"), ("Alice Johnson", "456 Elm St")]
 cursor.executemany(sql, values)
 db.commit()

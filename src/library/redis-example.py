@@ -14,5 +14,6 @@ def connectRedis():
     r.set('foo', 'Bar')
     print(r.get('foo'))
 
+
 if __name__ == '__main__':
     connectRedis()
