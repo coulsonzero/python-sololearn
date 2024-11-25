@@ -25,12 +25,12 @@ pg.PAUSE = 2.5    #为函数循环增延迟
 
 获取屏幕分辨率：
 pg.size()
-获取位置：pyautogui.position()
+获取位置:
 pg.position()
->>> Point(x=1000, y=600)
 判断坐标是否在屏幕上
 pg.onScreen(x, y）
-（创建while循环）实时获取位置 #cmd运行python
+
+（创建while循环）实时获取位置 # cmd运行python
 import pyautogui, sys
 print('press ctrl-c to quit.')
 try:
@@ -60,37 +60,38 @@ pg.PAUSE = 2.5
 pg.FAILSAFE = True
 
 调用鼠标点击：click（x,y,duration,button）
-pyautogui.click()   #当前位置点击，默认右键（可插入button='left')
-pg.click(x,y,duration=2) #先移动到（x,y)再点击
-pyautogui.click(button='right') #双击
-pyautogui.doubleClick()   #双击
-pg.tripleClick()  #三连击
-pg.rightClick()  #单击右键
-pg.middleClick()  #单击中键
-
-pg.click(clicks=6, interval=0.4) #多次连击
-pg.click(pg.locateCenterOnScreen('.png'))  #截图定位再点击，图片需放于桌面，不能放于文件夹内
-#无法点击软件按钮 ——改为 “用管理员权限”
+pg.click()                      # 当前位置点击，默认右键（可插入button='left')
+pg.click(button='right')
+pg.click(x, y, duration=2)      # 先移动到（x,y)再点击
+pg.doubleClick()  # 双击
+pg.tripleClick()  # 三连击
+pg.rightClick()   # 单击右键
+pg.middleClick()  # 单击中键
+pg.click(clicks=6, interval=0.4)    # 多次连击
+pg.click(pg.locateCenterOnScreen('.png'))  # 截图定位再点击，图片需放于桌面，不能放于文件夹内
+# 无法点击软件按钮 ——改为 “用管理员权限”
 
 程序暂停
-os.system('pause')   #任意键推出
-input()            #enter推出
-time.sleep()   #等待
+os.system('pause')   # 任意键推出
+input()              # enter推出
+time.sleep()         # 等待
+
+
 鼠标移动：moveTo（x,y,duration,button）
-
-
 pg.moveTo(x,y,time)
-pg.moveTo(x,y,t,button='left')   #从移动到指定位置
-pg.dragTo(x,y)  #拖动
-pg.scroll()   #滚动
-pyautogui.FAILSAFE = False    #禁止鼠标在左上角
-键盘操作：（str/list,interval)   #interval为每次输入间隔时间
-pg.typewrite()   #输入内容
-pg.hotkey()      #快捷键
-pg.press(）      #按下并松开
-pg.keyDown()     #按住
-pg.keyUp()       #松开
-pg.PUASE=1       #每隔1s执行一个操作指令
+pg.moveTo(x,y,t,button='left')   # 从移动到指定位置
+pg.dragTo(x,y)  # 拖动
+pg.scroll()     # 滚动
+pyautogui.FAILSAFE = False      # 禁止鼠标在左上角
+
+
+键盘操作：（str/list,interval)   # interval为每次输入间隔时间
+pg.typewrite()   # 输入内容
+pg.hotkey()      # 快捷键
+pg.press(）      # 按下并松开
+pg.keyDown()     # 按住
+pg.keyUp()       # 松开
+pg.PUASE=1       # 每隔1s执行一个操作指令
 pg.write('hello python !', interval=0.3)   #控制键盘输入，interval间隔输入字符时间
 
 

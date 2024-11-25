@@ -11,7 +11,7 @@ print(df.iloc[2])
 print(df.iloc[:3])
 print(df[(df["ages"] > 18) & (df["heights"] > 180)])
 
-# scv
+# csv
 df = pd.read_csv("ca-covid.csv")
 df.set_index("date", inplace=True)
 df.drop("state", axis=1, inplace=True)  

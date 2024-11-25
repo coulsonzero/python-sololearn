@@ -33,17 +33,16 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 def spider(url, keyword):
-    #step 1: 初始化浏览器
-    web = webdriver.Chrome()
+    web = webdriver.Chrome()    # step 1: 初始化浏览器
     web.get(url)
-    # 隐式等待3s--确保内容加载完全
-    web.implicitly_wait(3)
+    web.implicitly_wait(3)     # 隐式等待3s--确保内容加载完全
 
     # 定位元素
     input_tag = web.find_elements_by_id('key')
     input_tag.send_keys(keyword) # 模拟键盘输入关键字
     input_tag.send_keys(Keys.ENTER) # 模拟键盘按Enter键
     time.sleep(random.randint(2, 5))
+
 # 2.定位数据
 def get_goods(web):
     goods = web.find_elements_by_class_name('gl-item')
@@ -55,11 +54,10 @@ if __name__ == '__main__':
 
 
 from selenium import webdriver  # pip install selenium -i
-import time
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_condition     #as EC
+from selenium.webdriver.support import expected_condition     # as EC
 from selenium.webdriver.common.by import By
-
+import time
 
 #step 1: 声明浏览器
 web/browser = webdriver.Chrome(r'...\chrome.exe')
@@ -78,7 +76,8 @@ web.find_element(s)_by_xpath('')
 
 #from selenium.webdriver.common.keys import Keys
 web.find_element(s)_by_xpath('').send_keys("python", Keys.ENTER)
-web.find_element(s)_by_id
+web.find_element(s)_by_id()
+web.find_elements_by_class_name()
 ...
 
 #step 4： 元素操作

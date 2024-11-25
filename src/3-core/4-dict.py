@@ -38,11 +38,25 @@ def get():
     print(d.values())
     print(d.items())
 
+def add():
+    d = {'name': 'john', 'age': 23, 'email': 'john@163.com'}
+    d['sex'] = 'male'
+    d.update({'country': 'USA'})
+    print(d)
 
+def remove():
+    d = {'name': 'john', 'age': 23, 'email': 'john@163.com'}
+    d.pop('email')
+    print(d)
+    d.clear()
+    print(d)
 
 if __name__ == '__main__':
     # init()
     # method()
-    get()
+    # get()
+    # add()
+    # remove()
     pass
+
 

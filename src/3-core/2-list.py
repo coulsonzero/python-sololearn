@@ -2,27 +2,30 @@ import random
 
 def add():
     nums = [1, 2, 3, 4]  # [...]
+
     # 增
     nums.append(5)       # [..., 5]
     nums.insert(0, 0)    # [0, ...]
     nums.extend([6, 7])  # [..., 6, 7]
     nums += [8, 9]       # [..., 8, 9]
 
+
     print(nums, id(nums))
 
 def remove():
-    nums = [1, 2, 3, 4]
+    nums = [1, 2, 3, 4, 3]
     # 删
     # nums.pop()
     # nums.pop(-1)        # 删除指定index的value
     # nums.pop(10)        # IndexError: pop index out of range
 
-    # nums.remove(3)
+    nums.remove(3)
     # nums.remove(7)      # ValueError: list.remove(x): x not in list
 
     # del nums[1:2]
 
     # nums.clear()      # []
+    print(nums)
 
 def get():
     # 查
@@ -38,9 +41,6 @@ def sort():
     # nums.sort(reverse=True)   # [9, 7, 6, 3, 0]
     # random.shuffle(nums)      # [6, 0, 9, 3, 7]
 
-    # nums = ['q', 'a', 'k', 'b']
-    # nums.sort()               # ['a', 'b', 'k', 'q']
-    # nums.sort(reverse=True)   # ['q', 'k', 'b', 'a']
     print(nums)
 
 
@@ -76,11 +76,11 @@ def for_list():
 
 
 if __name__ == '__main__':
-    # add()
+    add()
     # remove()
     # get()
     # iter()
     # demo()
     # for_list()
-    sort()
+    # sort()
     pass

@@ -10,7 +10,13 @@ db = mysql.connector.connect(
 )
 
 cursor = db.cursor()
-cursor.execute("CREATE TABLE if not exists customers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), address VARCHAR(255));")
+cursor.execute('''
+    CREATE TABLE if not exists customers (
+        id INT AUTO_INCREMENT PRIMARY KEY, 
+        name VARCHAR(255), 
+        address VARCHAR(255)
+    );
+    ''')
 
 # 插入记录
 sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
