@@ -7,7 +7,7 @@ import random
 def spider(url, keyword):
     web = webdriver.Chrome()    # step 1: 初始化浏览器
     web.get(url)
-    web.implicitly_wait(3)     # 隐式等待3s--确保内容加载完全
+    web.implicitly_wait(3)      # 隐式等待3s--确保内容加载完全
 
     # 定位元素
     input_tag = web.find_element(By.ID, 'key')

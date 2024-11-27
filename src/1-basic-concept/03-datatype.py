@@ -1,7 +1,7 @@
 
 
-num : int   = 7
-pi  : float = 3.14
+num : int     = 7
+pi  : float   = 3.14
 c   : complex = 1 + 2j
 
 flag: bool  = True

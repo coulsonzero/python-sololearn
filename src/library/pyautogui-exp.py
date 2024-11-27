@@ -185,52 +185,6 @@ for i in range(len(list_num)):
 
 
 
-案例2
-import pyautogui
-for i in range(2, 11):
-    用0.5 秒的时间把光标移动到(400, 175 + i * 20) 位置
-pyautogui.moveTo(400, 175 + i * 20,
-    duration = 0.5)
-pyautogui.click(clicks = 2, button =
-    'left', interval = 0.05)# 点击进入单据
-time.sleep(3)
-pyautogui.click(100, 140)# 点击修改
-time.sleep(3)
-pyautogui.click(350, 190, button =
-    'left')# 左击发货日
-pyautogui.click(350, 190, button =
-    'right')# 右击发货日
-time.sleep(1.5)
-pyautogui.click(595, 397)# 选择日期5
-time.sleep(1.5)
-pyautogui.click(815, 472)# 完成
-time.sleep(1.5)
-pyautogui.click(565, 425)# 发出日大于接收日， 是
-time.sleep(1.5)
-pyautogui.click(155, 140)# 点击保存
-time.sleep(2)
-pyautogui.click(432, 140)# 点击查询
-time.sleep(5)
-
-
-每隔10s打印一次"hello,world"
-
-#模板
-from threading import Timer
-def func():
-    pass
-class RepeatingTimer(Timer):
-    def run(self):
-        while not self.finished.is_set():
-        self.function(*self.args, **self.kwargs)
-        self.finished.wait(self.interval)
-        t = RepeatingTimer(10.0,func)
-
-t.start()
-
-
-
-
 from threading import Timer
 def hello():
 print "hello, world"

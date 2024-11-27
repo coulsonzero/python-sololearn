@@ -1,10 +1,11 @@
 """
 arithmetic operators : + - *  / % // **
 assignment operators : += -= *= /= %=
-increment & Decrement: i += 1   i -= 1
 comparison operators : == != < > <= >=
-logical operators    : and or not
+
 s = "pass" if score > 60 else "fail"
+increment & Decrement: i += 1   i -= 1
+logical operators    : and or not
 """
 
 

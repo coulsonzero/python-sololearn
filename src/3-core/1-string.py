@@ -21,8 +21,8 @@ def example_string():
     print(s[0])           # 'h'
     print(s.split())      # ['Hello', 'World!']
     print(s.split(','))   # ['Hello World!']
-    print(''.join(['hello, world!']))   # 'hello, world!'
-    print(s.replace('!', '?'))          # 'Hello World?'
+    print(', '.join(['hello', 'world!']))    # 'hello, world!'
+    print(s.replace('!', '?'))              # 'Hello World?'
     print(s[::-1])        # !dlroW olleH
 
 if __name__ == '__main__':
